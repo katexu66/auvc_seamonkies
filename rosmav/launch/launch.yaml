@@ -1,0 +1,55 @@
+launch: # launch nodes by running "ros2 launch rosmav launch.yaml"
+
+- node:
+    pkg: "rosmav"
+    exec: "ros_bluerov2_interface"
+    name: "bluerov2_interface"
+    namespace: ""
+
+- node:
+    pkg: "rosmav"
+    exec: "bluerov2_camera_interface"
+    name: "bluerov2_camera_interface"
+    namespace: ""
+
+- node:
+    pkg: "sea_monkies"
+    exec: "integration"
+    name: "integration"
+    namespace: ""
+
+- node:
+    pkg: "sea_monkies"
+    exec: "angle_controller"
+    name: "angle_controller"
+    namespace: ""
+
+- node:
+    pkg: "sea_monkies"
+    exec: "pressure"
+    name: "pressure"
+    namespace: ""
+
+- node:
+    pkg: "sea_monkies"
+    exec: "pid_controller"
+    name: "pid_controller"
+    namespace: ""
+
+- node:
+    pkg: "sea_monkies"
+    exec: "lights"
+    name: "lights"
+    namespace: ""
+
+- node:
+    pkg: "sea_monkies"
+    exec: "molo"
+    name: "molo"
+    namespace: ""
+
+# - node:
+#     pkg: "sea_monkies"
+#     exec: "arming"
+#     name: "arming"
+#     namespace: ""
